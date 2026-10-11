@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050b18">
+  <title>ARISE | Real-Life Leveling System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">A</span><span>ARISE<span class="muted"> / SYSTEM</span></span></a>
+    <div class="top-actions"><span id="connection" class="connection">● Offline</span><button id="logoutBtn" class="ghost hidden">Sign out</button></div>
+  </header>
+
+  <main>
+    <section id="authView" class="auth-layout">
+      <div class="hero">
+        <p class="eyebrow">REAL-LIFE HUNTER SYSTEM</p>
+        <h1>Become the<br><span class="blue-text">strongest version</span><br>of yourself.</h1>
+        <p class="sub">Complete daily quests. Earn XP. Build habits. Your progress syncs across devices when you sign in.</p>
+        <div class="feature-row"><span>✦ 100 XP daily</span><span>✦ Levels 1–100</span><span>✦ E → S ranks</span></div>
+      </div>
+      <div class="panel auth-panel">
+        <div class="tabs"><button class="tab active" data-mode="login">Sign in</button><button class="tab" data-mode="register">Create account</button></div>
+        <h2 id="authTitle">Welcome back, Hunter.</h2>
+        <p class="muted" id="authDesc">Sign in to continue your progress.</p>
+        <form id="authForm">
+          <label>Email<input id="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label>Password<input id="password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required></label>
+          <button class="primary full" id="authSubmit" type="submit">Enter the System</button>
+          <p id="authMessage" class="message" aria-live="polite"></p>
+        </form>
+        <p class="tiny muted">Your account is private. Use a password you don't use elsewhere.</p>
+      </div>
+    </section>
+
+    <section id="appView" class="hidden">
+      <div class="welcome-line"><div><p class="eyebrow">SYSTEM ONLINE</p><h1>Hunter Dashboard</h1><p class="muted">Small wins compound. Show up today.</p></div><div class="date-chip" id="todayLabel"></div></div>
+
+      <section class="stats-grid">
+        <article class="panel level-panel">
+          <div class="panel-head"><span class="eyebrow">HUNTER STATUS</span><span id="rankBadge" class="rank-badge">E-RANK</span></div>
+          <div class="level-line"><div><span class="muted">LEVEL</span><div id="levelValue" class="level-number">1</div></div><div class="level-xp"><strong id="xpValue">0 XP</strong><span class="muted">lifetime XP</span></div></div>
+          <div class="progress-track"><div id="levelProgress" class="progress-fill"></div></div>
+          <p id="nextLevelText" class="muted tiny">0 / 100 XP to next level</p>
+          <div class="daily-score"><div><span class="muted tiny">TODAY'S XP</span><strong id="todayXp">0 / 100</strong></div><div class="ring" id="dailyRing"><span id="dailyPercent">0%</span></div></div>
+        </article>
+        <article class="panel stat-panel"><div class="panel-head"><span class="eyebrow">CORE ATTRIBUTES</span><span class="muted tiny">Improve through action</span></div><div id="statList" class="stat-list"></div></article>
+      </section>
+
+      <nav class="section-nav" aria-label="Dashboard sections"><a href="#quests">Daily quests</a><a href="#routine">Routine & meals</a><a href="#achievements">Achievements</a></nav>
+
+      <section id="quests" class="panel section-panel">
+        <div class="section-heading"><div><p class="eyebrow">MISSION BOARD</p><h2>Daily Quests</h2><p class="muted">Check off what you actually completed. Daily XP is capped at 100.</p></div><button id="resetDayBtn" class="ghost">Refresh today</button></div>
+        <div id="questList" class="quest-list"></div>
+        <div class="quest-footer"><span id="questCount" class="muted">0 / 0 completed</span><span class="muted tiny">Rest is part of progress. No punishment for missed quests.</span></div>
+      </section>
+
+      <section id="routine" class="panel section-panel">
+        <div class="section-heading"><div><p class="eyebrow">DAILY MAINTENANCE</p><h2>Routine & Meals</h2><p class="muted">Built around college 10 AM–6 PM and gym 8 PM–10 PM.</p></div></div>
+        <div class="routine-grid">
+          <div class="routine-card"><h3>🍽️ Three meals</h3><p class="muted tiny">Mark each meal when eaten.</p><div id="mealList" class="meal-list"></div></div>
+          <div class="routine-card"><h3>🌙 Sleep tracker</h3><p class="muted tiny">Record last night's sleep. Aim for consistent, adequate rest.</p><label>Hours slept<input id="sleepHours" type="number" min="0" max="24" step="0.25" placeholder="e.g. 7.5"></label><button id="saveSleepBtn" class="secondary full">Save sleep</button><p id="sleepMessage" class="message"></p></div>
+          <div class="routine-card schedule-card"><h3>🗓️ Your schedule</h3><div class="schedule-row"><b>Before 10 AM</b><span>Breakfast + short learning</span></div><div class="schedule-row"><b>10 AM–6 PM</b><span>College + lunch</span></div><div class="schedule-row"><b>6 PM–8 PM</b><span>Study / coding + dinner if needed</span></div><div class="schedule-row"><b>8 PM–10 PM</b><span>Gym</span></div><div class="schedule-row"><b>After 10 PM</b><span>Wind down + sleep routine</span></div></div>
+        </div>
+      </section>
+
+      <section id="achievements" class="panel section-panel">
+        <div class="section-heading"><div><p class="eyebrow">RECOGNITION</p><h2>Achievements</h2><p class="muted">Unlocked automatically from your recorded progress.</p></div></div>
+        <div id="achievementList" class="achievement-grid"></div>
+      </section>
+      <footer class="footer muted">ARISE is a habit tracker, not a measure of your worth. Your real progress matters more than XP.</footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
