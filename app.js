@@ -7,6 +7,7 @@ import { getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp } from "
 
 
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyA7DU5pvdAnMWiDEvm81TANoyFdZBfJ6Og",
   authDomain: "arise-web-ad4c9.firebaseapp.com",
