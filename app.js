@@ -5,9 +5,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/fireba
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
-
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyA7DU5pvdAnMWiDEvm81TANoyFdZBfJ6Og",
   authDomain: "arise-web-ad4c9.firebaseapp.com",
