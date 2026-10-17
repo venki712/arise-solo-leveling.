@@ -6,11 +6,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 
+
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY_HERE",
+  apiKey: "AIzaSyA7DU5pvdAnMWiDEvm81TANoyFdZBfJ6Og",
   authDomain: "arise-web-ad4c9.firebaseapp.com",
   projectId: "arise-web-ad4c9",
-  storageBucket: "PASTE_YOUR_STORAGE_BUCKET_HERE",
+  storageBucket: "arise-web-ad4c9.firebasestorage.app",
   messagingSenderId: "534782381504",
   appId: "1:534782381504:web:51d4d0a1b5a245dc7b8c25",
   measurementId: "G-WNN551J4VF"
