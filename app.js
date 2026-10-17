@@ -6,12 +6,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_FIREBASE_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+  apiKey: "YOUR_ACTUAL_API_KEY",
+  authDomain: "YOUR_ACTUAL_AUTH_DOMAIN",
+  projectId: "YOUR_ACTUAL_PROJECT_ID",
+  storageBucket: "YOUR_ACTUAL_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_ACTUAL_SENDER_ID",
+  appId: "YOUR_ACTUAL_APP_ID"
 };
 
 const $ = (id) => document.getElementById(id);
