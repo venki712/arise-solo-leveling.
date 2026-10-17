@@ -5,14 +5,17 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/fireba
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
+
 const firebaseConfig = {
-  apiKey: "YOUR_ACTUAL_API_KEY",
-  authDomain: "YOUR_ACTUAL_AUTH_DOMAIN",
-  projectId: "YOUR_ACTUAL_PROJECT_ID",
-  storageBucket: "YOUR_ACTUAL_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_ACTUAL_SENDER_ID",
-  appId: "YOUR_ACTUAL_APP_ID"
+  apiKey: "PASTE_YOUR_API_KEY_HERE",
+  authDomain: "arise-web-ad4c9.firebaseapp.com",
+  projectId: "arise-web-ad4c9",
+  storageBucket: "PASTE_YOUR_STORAGE_BUCKET_HERE",
+  messagingSenderId: "534782381504",
+  appId: "1:534782381504:web:51d4d0a1b5a245dc7b8c25",
+  measurementId: "G-WNN551J4VF"
 };
+
 
 const $ = (id) => document.getElementById(id);
 const authView = $("authView"), appView = $("appView");
